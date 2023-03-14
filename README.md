@@ -179,3 +179,15 @@ const ProductScreen = () => {
 
 }
 
+///// bcrypt :-
+
+
+hashSync :- is used to Synchronously generates a hash for the given string. It returns the hashed string
+
+hash :- is used for Asynchronously generating a hash for the given string. It returns promise is callback is committed and you need to resolve the promise.
+
+ 
+///// ===
+
+process.argv[2] === '-d'  
+The process.argv property is an inbuilt application programming interface of the process module which is used to get the arguments passed to the node.js process when run in the command line.
