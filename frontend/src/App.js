@@ -1,5 +1,5 @@
 import React from "react"
-import { Route,Routes } from "react-router-dom";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 import {Container} from "react-bootstrap"
 import  Header  from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,6 +11,7 @@ import ProductScreen from "./screens/ProductScreen";
 const App = () => {  //arow function
   return (
     <>
+    <BrowserRouter>
     <Header/>
     <Container>
       <Routes>
@@ -19,6 +20,7 @@ const App = () => {  //arow function
       </Routes>
     </Container>
     <Footer/>
+    </BrowserRouter>
     </>
   );
 }

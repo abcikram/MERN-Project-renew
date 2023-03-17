@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem } from 'react-bootstrap'
+import { Row, Col, Image, ListGroup, Card, Button, ListGroupItem} from 'react-bootstrap'
 import Rating from '../components/Rating'
 import axios from 'axios'
 
+
 const ProductScreen = () => {
+  // const [qty, setQty] = useState(0)
 
   const [product, setProduct] = useState({})
   const { id } = useParams()
@@ -62,13 +64,33 @@ const ProductScreen = () => {
                 </Col>
               </Row>
             </ListGroupItem>
+
+            {/* {product.countInStock > 0 && (
+              <ListGroupItem.Item>
+                <Row>
+                  <Col>qty</Col>
+                  <Col>
+                    <Form.Control as='select' value={qty} onChange={(e) => {
+                      setQty(e.target.value)
+                    }}>
+                      {
+                        [...Array(product.countInStock).keys()].map(x => (<option key={x + 1} value={x + 1}>
+                          {x + 1}
+                        </option>))
+                      }
+                    </Form.Control>
+                  </Col>
+                </Row>
+              </ListGroupItem.Item>
+            )} */}
+
             <ListGroupItem>
               <Button className="btn-block" type="button"
                 disabled={product.countInStock === 0}>Add To Card
               </Button>
             </ListGroupItem>
           </Card>
-          
+
         </Col>
       </Row>
     </>
